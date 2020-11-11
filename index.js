@@ -13,7 +13,5 @@ function submitData(userName, userEmail)
     })
   };
   
-  return fetch("http://localhost:3000/users", configObj).then(function(resp) {
-    
-  })
+  return fetch("http://localhost:3000/users", configObj).then(resp => resp.json()).then(object => console.log(object))
 }
