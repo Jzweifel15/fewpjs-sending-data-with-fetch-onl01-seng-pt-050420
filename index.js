@@ -17,5 +17,7 @@ function submitData(userName, userEmail)
     return resp.json();
   }).then(function(obj) {
     console.log(obj.id);
-  })
+  }).catch(function(error) {
+    console.log(error.message);
+  });
 }
