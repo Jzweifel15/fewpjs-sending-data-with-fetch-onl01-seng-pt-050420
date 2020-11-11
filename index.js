@@ -13,5 +13,9 @@ function submitData(userName, userEmail)
     })
   };
   
-  return fetch()
+  return fetch("http://localhost:3000/users", configObj).then(function(resp) {
+    return resp.json();
+  }).then(function(obj) {
+    console.log(obj["id"]);
+  })
 }
