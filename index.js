@@ -15,6 +15,18 @@ function submitData(userName, userEmail)
     body: JSON.stringify(formData)
   };
   
-  return fetch()
+  return fetch("http://localhost:3000/users", configObj).then(function(resp) {
+    return resp.json();
+  }).then(function(object) {
+    let h1 = document.createElement("h1");
+    h1.innerHTML = object.id;
+    document.body.appendChild(h1);
+    console.log(object);
+  }).catch(function(error) {
+    let h2 = document.createElement("h2");
+    h2.innerHTML = error.message;
+    document.body.appendChild(h2);
+    console.log(error.message);
+  })
   
 }
