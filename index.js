@@ -7,7 +7,7 @@ function submitData(userName, userEmail)
       "Content-Type": "application/json",
       "Accept": "application/json"
     },
-    body: 
+    body: JSON.stringify
   }
   
   return fetch(http://localhost:3000/users, configObj)
