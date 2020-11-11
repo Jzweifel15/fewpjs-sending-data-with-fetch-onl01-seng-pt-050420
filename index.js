@@ -27,6 +27,6 @@ function submitData(userName, userEmail)
     h2.innerHTML = error.message;
     document.body.appendChild(h2);
     console.log(error.message);
-  })
+  });
   
 }
